@@ -1,3 +1,44 @@
+## 🧠 Quick Revision (Quorum Types in Windows Server)
+
+### ✅ What is Quorum?
+- Quorum ensures that the cluster continues to run only if a majority of votes are available.
+- It prevents split-brain scenarios.
+
+---
+
+### 📊 Quorum Formula
+
+**Formula:**
+Quorum = n/2 + 1
+
+- Where **n = total number of votes (nodes + witness)**
+- Always consider **majority (>50%)**
+
+**Example:**
+- If total votes = 5 → Quorum = 3  
+- If total votes = 4 → Quorum = 3  
+
+---
+
+### ✅ Main Types of Quorum
+
+#### 1. Node Majority
+- Each node has 1 vote  
+- Used when odd number of nodes  
+
+#### 2. Node + Disk Majority
+- Adds shared disk as witness  
+- Used in SAN environments  
+
+#### 3. Node + File Share Majority
+- Uses file share as witness  
+- Used when no shared storage  
+
+#### 4. Cloud Witness
+- Uses Azure storage  
+- Best for hybrid/cloud setups  
+
+
 # ✅ Windows Clustering and NAS/SAN Protocols – Implementation & Troubleshooting
 
 This repository contains hands-on implementation notes, troubleshooting techniques, and real-world usage of **Windows Clustering** technologies and **enterprise storage protocols** (NAS/SAN). It is designed to showcase practical experience in **high availability**, **disaster recovery**, and **infrastructure storage design**.
@@ -72,21 +113,6 @@ This repository contains hands-on implementation notes, troubleshooting techniqu
 5. Enable **MPIO** (Multipath I/O) for **redundancy** and **performance**
 
 ---
-#### 1. Node Majority
-- Each node has 1 vote  
-- Used when odd number of nodes  
-
-#### 2. Node + Disk Majority
-- Adds shared disk as witness  
-- Used in SAN environments  
-
-#### 3. Node + File Share Majority
-- Uses file share as witness  
-- Used when no shared storage  
-
-#### 4. Cloud Witness
-- Uses Azure storage  
-- Best for hybrid/cloud setups
 
 
 - **Windows Clustering**: Proficient in configuring and managing **WSFC** and **Always On Availability Groups** to ensure **high availability** and **disaster recovery** for critical workloads.
