@@ -72,6 +72,22 @@ This repository contains hands-on implementation notes, troubleshooting techniqu
 5. Enable **MPIO** (Multipath I/O) for **redundancy** and **performance**
 
 ---
+#### 1. Node Majority
+- Each node has 1 vote  
+- Used when odd number of nodes  
+
+#### 2. Node + Disk Majority
+- Adds shared disk as witness  
+- Used in SAN environments  
+
+#### 3. Node + File Share Majority
+- Uses file share as witness  
+- Used when no shared storage  
+
+#### 4. Cloud Witness
+- Uses Azure storage  
+- Best for hybrid/cloud setups
+
 
 - **Windows Clustering**: Proficient in configuring and managing **WSFC** and **Always On Availability Groups** to ensure **high availability** and **disaster recovery** for critical workloads.
 - **Storage Expertise**: Hands-on experience with **NAS** and **SAN** storage technologies, including protocols like **NFS**, **SMB**, **iSCSI**, and **Fibre Channel** — applied in **virtualized** and **clustered environments**.
